@@ -2,21 +2,22 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
+
     min-height: 56px;
-    background: #f4f4f4;
+    background: url('https://static.pexels.com/photos/1780/landscape-nature-clouds-cloudy.jpg');
+    background-size: cover;
+    background-position: 60% 25%;
     // Positioning context for the mobile navigation icon
     position: relative;
     margin-bottom:$spacing-unit;
 
-    .logoCont{
+    .logo{
       position: relative;
       bottom: 0;
       padding-top: 90px;
       text-align: center;
       width: auto;
-      padding-bottom:45px;
+      padding-bottom:90px;
     }
 
     .nocLogo{
@@ -36,10 +37,17 @@
         margin-right:10px;
       }
 
-      li:hover{
+      a:hover, li:hover{
         color: #dddf4c;
         cursor: pointer;
       }
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+
+
     }
 
 }
@@ -203,59 +211,65 @@
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+    padding: $spacing-unit 0px $spacing-unit*3 0px;
 }
 
 .page-heading {
     font-size: 20px;
 }
 
-.post-list {
-    margin-left: 0;
-    list-style: none;
-
-    > li {
-        margin-bottom: $spacing-unit*5;
-    }
-
-    .topic-tags{
-      font-size:12px;
-    }
-}
-
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
-
-.post-link {
-    display: block;
-    font-size: 32px;
-    font-family: $heading-font-fam;
-    font-weight: 400;
-    color:#6094c9;
-}
-
-
 
 /**
  * Posts
  */
-.post-header {
+
+.post{
+
+ &__list {
+     margin-left: 0;
+     list-style: none;
+
+     > li {
+         margin-bottom: $spacing-unit*5;
+     }
+
+     .topic-tags{
+       font-size:12px;
+     }
+ }
+
+  &__meta {
+     font-size: $small-font-size;
+     color: $grey-color;
+ }
+
+  &__link {
+     display: block;
+     font-size: 32px;
+     font-family: $heading-font-fam;
+     font-weight: 400;
+     color:#6094c9;
+ }
+
+  &__header {
     margin-bottom: $spacing-unit;
+
 }
 
-.post-title {
+
+  &__title {
+    font-family: $heading-font-fam;
     font-size: 42px;
+    font-weight:600;
     letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
         font-size: 36px;
     }
-}
+  }
 
-.post-content {
+  &__content {
     margin-bottom: $spacing-unit;
 
     h2 {
@@ -281,4 +295,38 @@
             font-size: 18px;
         }
     }
+
+    .tags-h2{
+      padding-top: 30px;
+      font-family: $heading-font-fam;
+      font-size:26px;
+      font-weight: 300;
+    }
+
+    .tag-list{
+      font-family: $heading-font-fam;
+      padding-top: 30px;
+    }
+
+    .tag-posts{
+      margin-bottom:3px;
+    }
+
+  }
+
+  &__tags{
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+
+    li{
+    float: left;
+    margin-right: 15px;
+    }
+  }
+
+  &__showtags{
+    margin-bottom: $spacing-unit*2;
+  }
+
 }
