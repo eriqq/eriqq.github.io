@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Guide to better coding and something loremipsum."
-date:   2015-05-12 13:24:50 +0200
+date:   2015-05-14 13:24:50 +0200
 categories: jekyll update
 tags: web design sass css
 description: Guide to jekyll
