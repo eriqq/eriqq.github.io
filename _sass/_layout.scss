@@ -12,7 +12,7 @@ body{
     min-height: 56px;
     background: url('../images/landscape.jpg');
     background-size: cover;
-    background-position: 60% 40%;
+    background-position: 60% 70%;
     // Positioning context for the mobile navigation icon
     position: relative;
     margin-bottom:$spacing-unit;
@@ -252,10 +252,12 @@ body{
 
   &__link, &__link:visited {
      display: block;
-     font-size: 36px;
+     font-size: 38px;
      font-family: $heading-font-fam;
-     font-weight: 600;
-     color:$brand-color;
+     font-weight: 400;
+     color: $heading-color;
+     letter-spacing: -1px;
+     line-height: 1.1;
  }
 
  &__link:hover{
@@ -273,7 +275,7 @@ body{
   &__title {
     font-family: $heading-font-fam;
     font-size: 42px;
-    font-weight:600;
+    font-weight:400;
     letter-spacing: -1px;
     line-height: 1;
 
