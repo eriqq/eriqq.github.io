@@ -256,7 +256,7 @@ body{
      font-family: $heading-font-fam;
      font-weight: 400;
      color: $heading-color;
-     letter-spacing: -1px;
+     letter-spacing: -0.2px;
      line-height: 1.1;
  }
 
@@ -276,7 +276,7 @@ body{
     font-family: $heading-font-fam;
     font-size: 42px;
     font-weight:400;
-    letter-spacing: -1px;
+    letter-spacing: -0.2px;
     line-height: 1;
 
     @include media-query($on-laptop) {
