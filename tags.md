@@ -14,34 +14,28 @@ to the `site_tags` variable. -->
 <!-- Build the Page -->
 
 <!-- List of all tags -->
-<div class="post__showtags" >
-<h2 class="tag-list" >Tag List</h2>
-<ul class="post__tags">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] }}{% endcapture %}
-    <li>
-      <a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word | capitalize }}
-        <span>({{ site.tags[this_word].size }})</span>
-      </a>
-    </li>
-  {% endunless %}{% endfor %}
-</ul>
-</div>
+<!--<div class="">
+<h1>All Tags</h1>
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+{% capture this_word %}{{ tag_words[item]  }}{% endcapture %}
+<a class="tags-a" href="#{{ this_word | cgi_escape }}">{{ this_word | capitalize  }}</a>
+{% endunless %}
+{% endfor %}
+</div> -->
 <!-- Posts by Tag -->
+
 <div style="clear:both" class="tags-content">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item]  }}{% endcapture %}
-    <h2 class="tags-h2" id="{{ this_word | cgi_escape }}">{{ this_word | capitalize  }}</h2>
+    <ul class="tag-list">
+    <h2 id="{{this_word}}" class="tags-h2" >{{ this_word | capitalize  }}</h2>
     {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <div>
+
         <span class="tag-posts" style="float: left;">
-          <a href="{{ post.url }}">{{ post.title }}</a>
+          <li> <a href="{{ post.url }}">- {{ post.title }}</a></li>
+
         </span>
-        <span style="float: right;">
-          {{ post.date | date_to_string }}
-        </span>
-      </div>
-      <div style="clear: both;"></div>
-    {% endif %}{% endfor %}
+
+    {% endif %}{% endfor %}</ul>
   {% endunless %}{% endfor %}
 </div>

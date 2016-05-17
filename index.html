@@ -6,9 +6,12 @@ layout: default
 
   <ul class="post__list">
     {% for post in site.posts %}
+    <p class="post__author">
+      {{ post.date | date: "%b %-d " }}
+      </p>
       <li>
 
-        <span class="post__meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
 
         <h2>
           <a class="post__link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -16,14 +19,16 @@ layout: default
         {{ post.content }}
 
 
-
           <ul class="post__tags">
             {% for tags in post.tags %}
-            <li><a class="topic-tags" href="/tags#{{ tag }}">{{ tags | upcase }} </a>{% if forloop.last == false %},{% endif %}</li>
+            <li><a class="topic-tags" href="/tags#{{ tags }}">{{ tags | upcase }} </a>{% if forloop.last == false %},{% endif %}</li>
             {% endfor %}
           </ul>
+
       </li>
+
     {% endfor %}
   </ul>
+
 
 </div>
