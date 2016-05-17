@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Jekyll offers powerful support for code snippets."
-date:   2015-05-13 13:24:50 +0200
+date:   2015-05-15 13:24:50 +0200
 categories: jekyll update
 tags: web design java
 ---
