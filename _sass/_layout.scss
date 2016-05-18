@@ -72,84 +72,19 @@ body{
     }
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
-
-    .menu-icon {
-        display: none;
-    }
-
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
-
-        // Gaps between nav items, but not on the last one
-        &:not(:last-child) {
-            margin-right: 20px;
-        }
-    }
-
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: $spacing-unit / 2;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
-
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
-
-            > svg {
-                width: 18px;
-                height: 15px;
-
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
-
-        .trigger {
-            clear: both;
-            display: none;
-        }
-
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
-
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-
-            &:not(:last-child) {
-                margin-right: 0;
-            }
-            margin-left: 20px;
-        }
-    }
-}
-
-
-
 /**
  * Site footer
  */
+
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
+    padding-top: $spacing-unit * 1.5;
+    padding-bottom: $spacing-unit * 2;
     background:#282b2d;
 }
+
+
 
 .footer-heading {
     font-size: 18px;
@@ -158,37 +93,53 @@ body{
 }
 
 .contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
+.row .social-media-list {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    float:none;
+    clear:both;
 }
 
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
+.social-media-list img{
+  margin-left: 5px;
 }
 
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+.row{
+  width:100%;
+  float:left;
 }
 
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
+.footer-col-12{
+  width: 100%;
+  float:left;
 }
 
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+.footer-col-6{
+  width: 50%;
+  float: left;
 }
 
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+.copyright{
+  position: static;
+  left: 1px;
+  margin-bottom: 15px;
+  color: hsla(219, 8%, 59%, .9);
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.url-mainpage{
+  text-align: center;
+  margin-top: 15px;
+
+  a{
+    font-weight: 300;
+  }
 }
 
 @include media-query($on-laptop) {
@@ -252,7 +203,7 @@ body{
 
   &__link, &__link:visited {
      display: block;
-     font-size: 38px;
+     font-size: 42px;
      font-family: $heading-font-fam;
      font-weight: 400;
      color: $heading-color;
@@ -277,7 +228,7 @@ body{
     font-size: 42px;
     font-weight:400;
     letter-spacing: -0.2px;
-    line-height: 1;
+    line-height: 1.1;
 
     @include media-query($on-laptop) {
         font-size: 36px;
