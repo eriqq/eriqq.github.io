@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Guide to better coding and something loremipsum."
+title:  "Guide to better coding and something loremipsum"
 date:   2015-05-14 13:24:50 +0200
 categories: jekyll update
 tags: web design sass css
