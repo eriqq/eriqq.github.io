@@ -68,10 +68,6 @@ body{
     font-family: $heading-font-fam;
     color: $heading-color;
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
 }
 
 /**
