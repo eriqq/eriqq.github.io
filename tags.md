@@ -25,6 +25,7 @@ to the `site_tags` variable. -->
 <!-- Posts by Tag -->
 
 <div style="clear:both" class="tags-content">
+<h1 class="site-title" >Tags</h1>
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item]  }}{% endcapture %}
     <ul class="tag-list">
@@ -32,7 +33,7 @@ to the `site_tags` variable. -->
     {% for post in site.tags[this_word] %}{% if post.title != null %}
 
         <span class="tag-posts" style="float: left;">
-          <li> <a href="{{ post.url }}">- {{ post.title }}</a></li>
+          <li> <a href="{{ post.url }}">- {{ post.title }}</a> <span>  {{ post.date | date: "%b %-d %Y" }}</span></li>
 
         </span>
 

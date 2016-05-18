@@ -60,11 +60,13 @@ body{
 }
 
 .site-title {
-    font-size: 26px;
-    font-weight: 300;
+    font-size: 36px;
+    font-weight: 600;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
+    font-family: $heading-font-fam;
+    color: $heading-color;
 
     &,
     &:visited {
@@ -81,7 +83,7 @@ body{
     padding: $spacing-unit 0;
     padding-top: $spacing-unit * 1.5;
     padding-bottom: $spacing-unit * 2;
-    background:#282b2d;
+    background: #282b2d;
 }
 
 
@@ -89,7 +91,7 @@ body{
 .footer-heading {
     font-size: 18px;
     margin-bottom: $spacing-unit / 2;
-    color:$grey-color;
+    color: $grey-color;
 }
 
 .contact-list,
@@ -106,13 +108,13 @@ body{
 }
 
 .row{
-  width:100%;
-  float:left;
+  width: 100%;
+  float: left;
 }
 
 .footer-col-12{
   width: 100%;
-  float:left;
+  float: left;
 }
 
 .footer-col-6{
@@ -305,6 +307,12 @@ body{
       margin-bottom:3px;
       font-size: 20px;
       width: 100%;
+
+      span{
+        color: #C0C3C4;
+        font-size: 16px;
+        margin-left: 5px;
+      }
     }
 
     .tags-content{
