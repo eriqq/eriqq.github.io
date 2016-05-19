@@ -280,11 +280,17 @@ body{
       margin-right: 15px;
     }
 
+    .tag-container{
+      margin-left: 15px;
+    }
+
     .tag-list{
       font-family: $heading-font-fam;
       font-weight:300;
       padding-top: 45px;
       list-style: none;
+      display: inline-block;
+      margin-left: 0px;
 
       li{
         padding-left: 5px;

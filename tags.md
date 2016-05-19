@@ -28,15 +28,11 @@ to the `site_tags` variable. -->
 <h1 class="site-title" >Tags</h1>
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item]  }}{% endcapture %}
-    <ul class="tag-list">
+    <div class="tag-container" >
     <h2 id="{{this_word}}" class="tags-h2" >{{ this_word | capitalize  }}</h2>
+    <ul class="tag-list">
     {% for post in site.tags[this_word] %}{% if post.title != null %}
-
-        <span class="tag-posts" style="float: left;">
-          <li> <a href="{{ post.url }}">- {{ post.title }}</a> <span>  {{ post.date | date: "%b %-d %Y" }}</span></li>
-
-        </span>
-
-    {% endif %}{% endfor %}</ul>
+    <li> <span class="tag-posts" style="float: left;"> <a href="{{ post.url }}">- {{ post.title }}</a> <span>  {{ post.date | date: "%b %-d %Y" }}</span> </span></li>
+    {% endif %}{% endfor %}</ul></div>
   {% endunless %}{% endfor %}
 </div>
